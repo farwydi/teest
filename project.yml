@@ -1,0 +1,7 @@
+environment:
+  MONGO_DB: "${DATABASE_URL}"
+packages:
+  - name: qr
+    actions:
+      - name: qrx
+        runtime: nodejs:default

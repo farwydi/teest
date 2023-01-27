@@ -1,0 +1,21 @@
+name: divotx
+region: fra1
+databases:
+  - cluster_name: db-mongodb-fra1-99251
+    engine: MONGODB
+    name: db-mongodb-fra1-99251
+    production: true
+    version: "5"
+functions:
+  - name: data-provider
+    github:
+      branch: main
+      deploy_on_push: true
+      repo: farwydi/divot
+    source_dir: /
+    routes:
+      - path: /
+    envs:
+      - key: DATABASE_URL
+        scope: RUN_AND_BUILD_TIME
+        value: "mongodb+srv://${db.USERNAME}:${db.PASSWORD}@${db.HOSTNAME}:${db.PORT}/${db.DATABASE}?authSource=admin&tls=true"

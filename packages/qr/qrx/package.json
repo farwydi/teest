@@ -1,0 +1,9 @@
+{
+  "name": "hello",
+  "version": "1.0.0",
+  "description": "Hello world: NodeJs",
+  "main": "index.js",
+  "dependencies": {
+    "mongodb": "4.13"
+  }
+}
