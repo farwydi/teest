@@ -1,5 +1,3 @@
-environment:
-  MONGO_DB: "${DATABASE_URL}"
 packages:
   - name: qr
     actions:
