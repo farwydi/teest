@@ -11,7 +11,7 @@ functions:
     github:
       branch: main
       deploy_on_push: true
-      repo: farwydi/divot
+      repo: farwydi/teest
     source_dir: /
     routes:
       - path: /
